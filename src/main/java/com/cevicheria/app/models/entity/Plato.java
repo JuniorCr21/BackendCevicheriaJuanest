@@ -19,7 +19,7 @@ public class Plato implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column
+	@Column 
 	private String nombre;
 	
 	@Column
@@ -30,6 +30,10 @@ public class Plato implements Serializable{
 	
 	@Column
 	private boolean estado;
+	
+	/*
+	@OneToMany(targetEntity = LineaDePedido.class)
+	private List<LineaDePedido> lineaDePedidos;*/
 
 	public Long getId() {
 		return id;
@@ -70,5 +74,15 @@ public class Plato implements Serializable{
 	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
+
+	/*
+	public List<LineaDePedido> getLineaDePedidos() {
+		return lineaDePedidos;
+	}
+
+	public void setLineaDePedidos(List<LineaDePedido> lineaDePedidos) {
+		this.lineaDePedidos = lineaDePedidos;
+	}*/
+	
 	
 }

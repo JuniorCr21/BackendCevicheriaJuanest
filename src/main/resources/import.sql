@@ -103,7 +103,6 @@ insert into Plato(nombre,tipo,precio,estado) values('Chupe de Mariscos','Sopas y
 insert into Plato(nombre,tipo,precio,estado) values('Chupe de Langostinos','Sopas y Cremas',20.0,1)
 
 
-
-/***************Insert into Para Pedidos*******************/
-insert into Pedido(cliente, precio_total, estado, fecha, mesa_id, preferencia) values('Julio Cabanillas', 0, 1, GETDATE(), 1, 1)
-insert into Pedido(cliente, precio_total, estado, fecha, mesa_id, preferencia) values('Junnior Carrion', 0, 1,GETDATE(), 2, 1)
+/***************Insert into Para Linea de Pedidos******************/
+insert into linea_de_pedido(plato_id,bebida_id,guarnicion_id) values (1,1,1)
+insert into Pedido (cliente,linea_de_pedido_id,mesa_id,date) values ('Junior Carrion',1,1,GETDATE())
